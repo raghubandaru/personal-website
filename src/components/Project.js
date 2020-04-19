@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import PropTypes from "prop-types"
 
 import check from "../assets/check.svg"
 import question from "../assets/question.svg"
@@ -74,6 +75,10 @@ function Project({ body }) {
       <MDXRenderer>{body}</MDXRenderer>
     </div>
   )
+}
+
+Project.propTypes = {
+  body: PropTypes.string.isRequired,
 }
 
 export default Project

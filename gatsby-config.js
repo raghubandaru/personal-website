@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
     author: "Raghu Bandaru",
-    title: `RB | Portfolio`,
-    description: `Developing Accessible and Secure Web Applications to solve Client Business Requirements and to Enhance end user Digital Experience`,
+    title: `Raghu Bandaru`,
+    description: `Developing accessible and secure web applications to solve client business requirements and to enhance end user digital experience`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Inter\:400,500,600,700,800,900`],
+        fonts: [`Inter\:400,700,900`],
         display: "swap",
       },
     },

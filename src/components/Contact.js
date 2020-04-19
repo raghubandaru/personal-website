@@ -43,7 +43,7 @@ function Contact() {
               margin-top: 2rem;
             `}
           >
-            raghubandaru45@gmail.com
+            Email: raghubandaru45@gmail.com
           </p>
           <LinkGroup
             css={css`
