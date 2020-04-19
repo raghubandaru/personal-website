@@ -1,21 +1,84 @@
 import React from "react"
-import { Link } from "gatsby"
+import { css } from "@emotion/core"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Contact from "../components/Contact"
+import Container from "../components/Container"
+import Layout from "../components/Layout"
+import Project from "../components/Project"
+import useProjects from "../hooks/use-projects"
+import { below } from "../utilities/breakpoints"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const projects = useProjects()
+
+  return (
+    <Layout>
+      <header
+        css={css`
+          background: #f0f4f8;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          min-height: 80vh;
+        `}
+      >
+        <Container>
+          <div
+            css={css`
+              text-align: center;
+
+              h1 {
+                margin-bottom: 1.5rem;
+
+                ${below.small`
+                  margin-bottom: 2rem;
+                `}
+              }
+
+              h2 {
+                margin-bottom: 2.5rem;
+
+                ${below.small`
+                  margin-bottom: 3rem;
+                `}
+              }
+            `}
+          >
+            <h1>Raghu Bandaru</h1>
+            <h2>Full Stack Software Engineer</h2>
+            <p>
+              Developing accessible and secure web applications to solve client
+              business requirements and to enhance end user digital experience
+            </p>
+          </div>
+        </Container>
+      </header>
+      <main>
+        <div
+          css={css`
+            margin-top: 6rem;
+          `}
+        >
+          <Container>
+            <h4
+              css={css`
+                text-align: center;
+              `}
+            >
+              Latest Side Projects
+            </h4>
+            {projects.map(({ title, body }) => (
+              <Project key={title} body={body} />
+            ))}
+          </Container>
+        </div>
+        <div css={css``}>
+          <Contact />
+        </div>
+      </main>
+    </Layout>
+  )
+}
 
 export default IndexPage
