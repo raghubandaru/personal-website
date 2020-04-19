@@ -3,7 +3,7 @@ import { css } from "@emotion/core"
 
 import Contact from "../components/Contact"
 import Container from "../components/Container"
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Project from "../components/Project"
 import useProjects from "../hooks/use-projects"
 import { below } from "../utilities/breakpoints"
