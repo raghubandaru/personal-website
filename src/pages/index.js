@@ -49,7 +49,8 @@ const IndexPage = () => {
             <h2>Full Stack Software Engineer</h2>
             <p>
               Developing accessible and secure web applications to solve client
-              business requirements and to enhance end user digital experience
+              business requirements and to enhance the end-user digital
+              experience
             </p>
           </div>
         </Container>

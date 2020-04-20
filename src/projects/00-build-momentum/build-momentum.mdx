@@ -9,40 +9,25 @@ import LinkGroup from "../../components/LinkGroup"
 
 ##### Motivation
 
-- How difficult is it to get up and running with a goal?
+- How difficult is it to getting up and running with a goal?
 - How many times people start learning new things or building new habits end abruptly?
 
-I believe in consistency and accountability
-during the process, especially in the beginning. It is the sheer
-consistency over a period that builds momentum that accelerates
-the process of achieving goals.
+I believe in accountability and consistency during the process, especially in the beginning. It is the sheer consistency over a period that builds momentum that accelerates the process of achieving goals.
 
-I chose to develop a minimal web app that demonstrates
-technical skills and simulates the above process to fit my needs.
-Each user can activate only one goal and work on it for a week.
-Add the tasks that direct you towards the goal and stay
+I chose to develop a minimal web app that demonstrates technical skills and simulates the above process to fit my needs.
+Each user can activate only one goal and work on it for a week. Add the tasks that direct you towards the goal and stay
 accountable through the progress of the week. Rinse and Repeat!
 
 ##### Technical Skills
 
-- App is developed in MERN Stack. UI is written in React.js,
-  Server Side API is written in Express.js (Node.js Web
-  Application Framework) and Data is stored in MongoDB.
-- Supports server side caching of the resources and is implemented
-  using Redis.
-- Authentication is implemented using Json Web Tokens. App uses
-  Access tokens to authroize the user and Refresh tokens to
-  generate additional Access tokens.
-- Supports file upload and crop. Uploaded assets are stored in
-  Cloudinary (Cloud based image and video management platform).
-- Client side of the app uses React Context API for global state
-  management. Focus is on utilizing component composition,
-  building reusable components, lazy loading and prefetching
-  components.
+- Chose the MERN stack to build the application, I have developed UI in React.js, Server-side API in Express.js (Node.js Web Application Framework) and Database in MongoDB.
+- JSON Web Token is used to implement authentication and authorization of the app. App uses Access tokens to authorize the user and Refresh tokens to generate additional access tokens.
+- Supports server-side pagination and caching of the resources. Redis is used to implement the cache layer.
+- Supports file upload and crop, the uploaded assets are stored in the Cloudinary (Cloud-based image and video management platform).
+- The client-side of the app uses React Context API for global state management. The focus is on utilizing component composition and building reusable components.
+- Supports lazy loading and prefetching the components, thus only loading the necessary chunks.
 - Styled-components (CSS-in-JS library) is used for styling.
-- Each active goal is valid till saturday midnight of that week.
-  Custom Heroku Scheduler script takes care of automating and
-  archiving all active goals of the week in a scalable manner.
+- Each active goal is valid until Saturday midnight of that week. Custom Heroku scheduler script automates this process of archiving.
 
 <LinkGroup>
   <a
