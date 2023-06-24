@@ -13,7 +13,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <p>Under revamp!</p>
+      <p>Under revamp!!</p>
     </Layout>
   )
 }
